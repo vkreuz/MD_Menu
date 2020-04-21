@@ -74,11 +74,11 @@ tree is equal to three.
 #define MD_PRINTX(s, v)   ///< Library debugging output macro
 #endif
 
-const char FLD_PROMPT[] = ":";   ///< Prompt separator between input field label and left delimiter
-const char FLD_DELIM_L[] = "[";  ///< Left delimiter for variable field input
-const char FLD_DELIM_R[] = "]";  ///< Right delimiter for variable field input
-const char MNU_DELIM_L[] = "<";  ///< Left delimiter for menu option label
-const char MNU_DELIM_R[] = ">";  ///< Right delimiter for menu option label
+const char FLD_PROMPT[] = "";   ///< Prompt separator between input field label and left delimiter
+const char FLD_DELIM_L[] = "";  ///< Left delimiter for variable field input
+const char FLD_DELIM_R[] = "";  ///< Right delimiter for variable field input
+const char MNU_DELIM_L[] = "";  ///< Left delimiter for menu option label
+const char MNU_DELIM_R[] = "";  ///< Right delimiter for menu option label
 
 const char INP_BOOL_T[] = "Y";   ///< Boolean input True display value. Length should be same as INP_BOOL_F
 const char INP_BOOL_F[] = "N";   ///< Boolean input False display value. Length should be same as INP_BOOL_T

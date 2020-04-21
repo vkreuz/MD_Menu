@@ -442,12 +442,18 @@ bool MD_Menu::processInt(userNavAction_t nav, mnuInput_t *mInp, bool rtfb, uint1
 
   if (update)
   {
-    char sz[INP_PRE_SIZE(mInp) + mInp->fieldWidth + INP_POST_SIZE(mInp) + 1];
+    char sz[INP_PRE_SIZE(mInp)
+            + mInp->fieldWidth
+            + INP_POST_SIZE(mInp) + 1
+            + (mInp->pList != NULL ? strlen_P(mInp->pList) + 1 : 0 )
+            ];
 
     strPreamble(sz, mInp);
     ltostr(sz + strlen(sz), mInp->fieldWidth + 1, _V.value, mInp->base);
     strPostamble(sz, mInp);
-
+    
+    if (mInp->pList != NULL) strcat_P(sz, mInp->pList);
+    
     _cbDisp(DISP_L1, sz);
 
     // real time feedback needed
